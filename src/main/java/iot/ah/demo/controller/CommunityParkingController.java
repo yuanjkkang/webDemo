@@ -75,7 +75,7 @@ public class CommunityParkingController {
         return content;
     }
 
-    @RequestMapping(value = "/BillingRules")
+    @PostMapping(value = "/BillingRules")
     public BaseDownResponse getEnvProp(HttpServletRequest request) throws Exception {
         Map<String, String> map = new HashMap<String, String>();
         Enumeration headerNames = request.getHeaderNames();
@@ -94,7 +94,7 @@ public class CommunityParkingController {
         logger.info("调用成功"+"请求参数"+json);
 
         BaseDownResponse baseDownResponse = new BaseDownResponse();
-        baseDownResponse.setMessage("success");
+        baseDownResponse.setMessage(json);
         return baseDownResponse;
     }
     public static byte[] readInputStream(InputStream inStream) throws Exception {
