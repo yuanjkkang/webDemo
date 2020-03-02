@@ -76,6 +76,7 @@ public class CommunityParkingController {
     }
 
     @PostMapping(value = "/BillingRules")
+    @ResponseBody
     public BaseDownResponse getEnvProp(HttpServletRequest request) throws Exception {
         Map<String, String> map = new HashMap<String, String>();
         Enumeration headerNames = request.getHeaderNames();
