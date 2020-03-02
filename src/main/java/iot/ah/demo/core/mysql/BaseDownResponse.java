@@ -9,7 +9,7 @@ public class BaseDownResponse<T> {
     /**
      * 状态码
      */
-    private String code;
+    private int code;
     /**
      * 返回消息
      */
@@ -21,22 +21,16 @@ public class BaseDownResponse<T> {
     /**
      * 返回对象主体信息
      */
-    private T data;
+    private String id;
 
     public BaseDownResponse() {
     }
 
-    public BaseDownResponse(String code, String message, String localizedMsg, T data) {
-        this.code = code;
-        this.message = message;
-        this.localizedMsg = localizedMsg;
-        this.data = data;
-    }
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -56,21 +50,21 @@ public class BaseDownResponse<T> {
         this.localizedMsg = localizedMsg;
     }
 
-    public T getData() {
-        return data;
+    public String getId() {
+        return id;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "BaseDownResponse{" +
-                "code='" + code + '\'' +
+                "code=" + code +
                 ", message='" + message + '\'' +
                 ", localizedMsg='" + localizedMsg + '\'' +
-                ", data=" + data +
+                ", id='" + id + '\'' +
                 '}';
     }
 }
