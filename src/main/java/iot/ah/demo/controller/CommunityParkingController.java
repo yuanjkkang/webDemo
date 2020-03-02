@@ -92,6 +92,7 @@ public class CommunityParkingController {
 
         json = new String(readInputStream(request.getInputStream()), "UTF-8");
         logger.info("调用成功"+"请求参数"+json);
+
         BaseDownResponse baseDownResponse = new BaseDownResponse();
         baseDownResponse.setMessage("success");
         return baseDownResponse;
