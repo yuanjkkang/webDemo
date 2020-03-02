@@ -29,7 +29,7 @@ import java.util.Map;
  */
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/CommunityParkingService",consumes = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.POST)
+@RequestMapping(value = "/CommunityParkingService")
 public class CommunityParkingController {
     @Autowired
     private Environment env;
