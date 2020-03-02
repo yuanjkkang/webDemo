@@ -28,11 +28,6 @@ public class HelloController {
 
     String modelId = "FaceSet";
 
-    @GetMapping("/")
-    public String main(Model model) {
-        return "welcome";
-    }
-
     @ResponseBody
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public String insert() throws UnsupportedEncodingException {
