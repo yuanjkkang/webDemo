@@ -29,7 +29,7 @@ import java.util.Map;
  */
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/CommunityParkingService")
+@RequestMapping(value = "/CommunityParkService")
 public class CommunityParkingController {
     @Autowired
     private Environment env;
@@ -75,7 +75,7 @@ public class CommunityParkingController {
         return content;
     }
 
-    @PostMapping(value = "/BillingRules")
+    @PostMapping(value = "/BillingRule")
     @ResponseBody
     public BaseDownResponse getEnvProp(HttpServletRequest request) throws Exception {
         Map<String, String> map = new HashMap<String, String>();
